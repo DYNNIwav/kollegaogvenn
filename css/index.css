@@ -303,3 +303,124 @@ main {
     transform: translate(-150%);
   }
 }
+
+/* Mobile and Tablet Responsive Styles */
+
+/* Tablet styles (768px and below) */
+@media screen and (max-width: 768px) {
+  /* Main content adjustments */
+  main {
+    padding: 20px 10px;
+  }
+
+  /* Text content */
+  p {
+    font-size: 1rem;
+    max-width: 90vw;
+    padding: 0 20px;
+  }
+
+  /* Smiley adjustments */
+  .smiley-home img {
+    width: 250px;
+    height: auto;
+  }
+
+  /* Zoom text */
+  .zoom-text {
+    bottom: 80px;
+    width: 95vw;
+    max-width: none;
+    min-width: 280px;
+  }
+
+  .scroll-arrows-text {
+    font-size: 1.2rem;
+  }
+
+  /* Arrow positioning */
+  .scroll-arrow {
+    bottom: 30px;
+    font-size: 1.2rem;
+  }
+
+  /* Customer section */
+  .customers-section {
+    padding: 20px;
+  }
+
+  .customer-zoom-text {
+    width: 95vw;
+    max-width: none;
+    min-width: 280px;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media screen and (max-width: 480px) {
+  /* Even smaller smiley */
+  .smiley-home img {
+    width: 200px;
+  }
+
+  /* Smaller text */
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .scroll-arrows-text {
+    font-size: 1rem;
+  }
+
+  /* Zoom text adjustments */
+  .zoom-text {
+    bottom: 60px;
+  }
+
+  /* Arrow */
+  .scroll-arrow {
+    bottom: 20px;
+    font-size: 1rem;
+  }
+
+  /* Grass line */
+  .ground-line {
+    width: 150px;
+    height: 6px;
+  }
+
+  /* Bounce animation - smaller on mobile */
+  @keyframes gravityBounce {
+    0% {
+      transform: translateY(0) scaleY(1);
+    }
+    15% {
+      transform: translateY(-80px) scaleY(1.1); /* Smaller bounce */
+    }
+    30% {
+      transform: translateY(4px) scaleY(0.9);
+    }
+    35% {
+      transform: translateY(0) scaleY(1);
+    }
+    50% {
+      transform: translateY(-40px) scaleY(1.05);
+    }
+    65% {
+      transform: translateY(2px) scaleY(0.95);
+    }
+    70% {
+      transform: translateY(0) scaleY(1);
+    }
+    80% {
+      transform: translateY(-15px) scaleY(1.02);
+    }
+    90% {
+      transform: translateY(1px) scaleY(0.98);
+    }
+    100% {
+      transform: translateY(0) scaleY(1);
+    }
+  }
+}

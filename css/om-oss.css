@@ -56,3 +56,118 @@
   word-wrap: normal;
   width: 20vw;
 }
+
+/* Mobile and Tablet Responsive Styles */
+
+/* Tablet styles (768px and below) */
+@media screen and (max-width: 768px) {
+  /* Main container */
+  #om-oss {
+    padding: 20px 10px;
+  }
+
+  .om-oss-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .om-oss-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  /* Cards container - stack vertically on tablet */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Person cards */
+  .person-card {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .person-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .person-text {
+    padding: 0 20px;
+  }
+
+  .person-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .person-text p {
+    font-size: 0.95rem;
+    max-width: 350px;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media screen and (max-width: 480px) {
+  /* Container adjustments */
+  #om-oss {
+    padding: 15px 5px;
+  }
+
+  .om-oss-container {
+    padding: 5px;
+  }
+
+  .om-oss-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  /* Cards */
+  .cards-container {
+    gap: 30px;
+  }
+
+  .person-card {
+    max-width: 100%;
+  }
+
+  /* Images */
+  .person-image img {
+    max-width: 250px;
+    margin-bottom: 15px;
+  }
+
+  /* Text */
+  .person-text {
+    padding: 0 10px;
+  }
+
+  .person-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .person-text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 280px;
+  }
+}
+
+/* Very small screens (320px and below) */
+@media screen and (max-width: 320px) {
+  .om-oss-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .person-image img {
+    max-width: 200px;
+  }
+
+  .person-text p {
+    font-size: 0.85rem;
+    max-width: 250px;
+  }
+}

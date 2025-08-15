@@ -32,3 +32,17 @@ footer {
 .socials {
   font-size: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    justify-content: center;
+  }
+}

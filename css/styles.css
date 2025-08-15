@@ -3,6 +3,10 @@
 @import "_variables.css";
 @import "_components.css";
 
+html {
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,6 +18,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
 }
 
 h1,
