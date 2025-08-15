@@ -1,0 +1,27 @@
+@import "header.css";
+@import "footer.css";
+@import "_variables.css";
+@import "_components.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-primary);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-heading);
+}
+
+p {
+  font-family: var(--font-family-body);
+}
