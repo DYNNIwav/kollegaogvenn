@@ -291,16 +291,12 @@ main {
   transition: animation-play-state 0.3s ease;
 }
 
-.customer-carousel-text:hover {
-  animation-play-state: paused;
-}
-
 @keyframes slideshow {
   0% {
-    transform: translate(150%);
+    transform: translate(100%);
   }
   100% {
-    transform: translate(-150%);
+    transform: translate(-100%);
   }
 }
 
@@ -314,10 +310,8 @@ main {
   }
 
   /* Text content */
-  p {
+  #home p {
     font-size: 1rem;
-    max-width: 90vw;
-    padding: 0 20px;
   }
 
   /* Smiley adjustments */
@@ -354,6 +348,15 @@ main {
     max-width: none;
     min-width: 280px;
   }
+  .customer-carousel-text {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--font-family-primary);
+    color: var(--font-color-primary);
+    filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5));
+    animation: slideshow 20s linear infinite;
+    transition: animation-play-state 0.3s ease;
+  }
 }
 
 /* Mobile styles (480px and below) */
@@ -364,7 +367,7 @@ main {
   }
 
   /* Smaller text */
-  p {
+  #home p {
     font-size: 0.9rem;
     line-height: 1.4;
   }
