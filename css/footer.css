@@ -3,6 +3,8 @@ footer {
   height: auto;
   color: var(--font-color-primary);
   z-index: 100;
+  position: relative;
+  margin-top: auto;
 }
 
 .footer-container {
@@ -21,6 +23,11 @@ footer {
 .footer-middle {
   display: flex;
   justify-content: center;
+}
+
+.footer-middle img {
+  width: 100px;
+  height: auto;
 }
 
 .footer-left {

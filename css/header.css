@@ -12,37 +12,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
+  margin: 30px;
   position: relative;
 }
 
 .header-left a {
   display: flex;
   align-items: center;
-}
-
-.smiley {
-  display: flex;
-  padding-right: 10px;
-}
-
-.smiley img {
-  width: 45px;
-  height: auto;
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5));
-}
-
-.smiley-animation {
-  animation: zoom 2s ease-in-out infinite alternate;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.2);
-  }
 }
 
 .logo {
@@ -53,7 +29,6 @@ header {
 .logo img {
   width: 200px;
   height: auto;
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5));
 }
 
 /* Hamburger menu styles */

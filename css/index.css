@@ -1,5 +1,5 @@
 #home {
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -9,7 +9,6 @@
 }
 
 body {
-  height: 400vh;
   overflow-x: hidden;
 }
 
@@ -21,28 +20,52 @@ main {
   text-align: center;
 }
 
-#home p {
-  font-size: 1.4rem;
-  line-height: 1.5;
-  max-width: 60vw;
-  text-wrap: pretty;
-  font-family: var(--font-family-primary);
-  color: var(--font-color-secondary);
+.home-container {
+  height: 100vh;
+  width: 200vw;
 }
 
-.zoom-section {
-  position: fixed;
-  top: 0;
-  left: 0;
+.animation-text {
+  position: relative;
   width: 100vw;
-  height: 100vh;
-  z-index: 10;
+  overflow: hidden;
+}
+
+.logo-scroll {
+  display: flex;
+  width: 300vw;
+  margin: 20px;
+  animation: infiniteScroll 15s linear infinite;
+}
+.logo-scroll img {
+  width: 100vw;
+}
+
+.smiley-scroll {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+@keyframes infiniteScroll {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-100vw);
+  }
+}
+.home-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: var(--home-opacity, 1);
-  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-width: 60vw;
+  font-size: 1.4rem;
 }
 
 .scroll-arrow {
@@ -85,156 +108,28 @@ main {
   text-align: center;
 }
 
-/* Alternative: Use CSS to create crisp text at any scale */
-.scroll-arrows-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-  font-family: var(--font-family-primary);
-  white-space: nowrap;
-
-  /* Vector-like rendering */
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-  text-rendering: geometricPrecision;
-  font-smooth: never;
-  -webkit-text-stroke: 0.01em transparent; /* Creates vector-like edges */
-}
-
-.zoom-text {
+.customer-button {
   position: fixed;
   bottom: 100px;
   left: 50%;
-  transform: translateX(-50%) translateY(var(--text-move, 0px));
-  /* Remove: scale(var(--text-zoom, 1)) */
-  transform-origin: 30% center;
-  opacity: var(--text-opacity, 1);
-  z-index: 15;
-
-  /* Clean rendering */
-  will-change: transform;
+  transform: translateX(-50%);
+  z-index: 10;
+  outline: 2px solid var(--font-color-primary);
 }
 
-#zoomSVG {
-  /* Let SVG handle its own scaling */
-  overflow: visible;
-}
-
-.black-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  z-index: 50;
-  opacity: var(--black-opacity, 0);
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.scroll-container {
-  bottom: 0;
-}
-
-.smiley-zoom-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.customer-button:hover {
+  cursor: pointer;
 }
 
 .smiley-home img {
-  align-items: center;
-  justify-content: center;
-  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
   height: auto;
-  margin-bottom: 0;
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5));
-  animation: gravityBounce 2.5s ease-out infinite;
-  transform-origin: bottom center;
-}
-
-@keyframes gravityBounce {
-  0% {
-    transform: translateY(0) scaleY(1);
-    animation-timing-function: ease-out;
-  }
-  15% {
-    transform: translateY(-120px) scaleY(1.1); /* High bounce */
-    animation-timing-function: ease-in;
-  }
-  30% {
-    transform: translateY(4px) scaleY(0.9); /* Land slightly INTO the grass */
-    animation-timing-function: ease-out;
-  }
-  35% {
-    transform: translateY(0) scaleY(1); /* Back to resting on grass */
-  }
-  50% {
-    transform: translateY(-60px) scaleY(1.05); /* Medium bounce */
-    animation-timing-function: ease-in;
-  }
-  65% {
-    transform: translateY(2px) scaleY(0.95); /* Small land into grass */
-    animation-timing-function: ease-out;
-  }
-  70% {
-    transform: translateY(0) scaleY(1); /* Rest on grass */
-  }
-  80% {
-    transform: translateY(-20px) scaleY(1.02); /* Small bounce */
-    animation-timing-function: ease-in;
-  }
-  90% {
-    transform: translateY(1px) scaleY(0.98); /* Tiny land */
-  }
-  100% {
-    transform: translateY(0) scaleY(1); /* Final rest on grass */
-  }
-}
-
-.ground-line {
-  position: relative;
-  width: 30vw;
-  height: 10px;
-  background: linear-gradient(
-    to right,
-    #4caf50 0%,
-    #66bb6a 25%,
-    #4caf50 50%,
-    #388e3c 75%,
-    #4caf50 100%
-  );
-  border-radius: 4px;
-  margin-top: 0;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Add some grass blades */
-.ground-line::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 20%;
-  width: 3px;
-  height: 12px;
-  background: #4caf50;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  transform: rotate(-10deg);
-}
-
-.ground-line::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  right: 30%;
-  width: 2px;
-  height: 14px;
-  background: #66bb6a;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  transform: rotate(15deg);
+  z-index: 0;
+  opacity: 5%;
 }
 
 /* Customers section - fixed positioning during zoom-out */

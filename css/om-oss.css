@@ -1,9 +1,11 @@
 #om-oss {
   display: flex;
-  max-width: 100vw;
+  width: 100vw;
+  min-height: 100vh;
   background-color: var(--background-color-primary);
   color: var(--font-color-secondary);
   overflow-x: hidden;
+  position: relative;
 }
 
 .om-oss-container h1 {
@@ -21,40 +23,61 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 70vh;
+  min-height: calc(100vh - 10vh);
+  margin-top: 10vh;
+  padding-bottom: 2rem;
 }
 
 .cards-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.person-card {
-  flex: 1; /* Each card takes equal space */
+.person-card-charlotte {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
-  margin-top: 20px;
+}
+
+.person-card-embla {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  text-align: center;
 }
 
 .person-image {
   width: 300px;
   height: auto;
-  border-radius: 8px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+h1 {
   margin-bottom: 20px;
 }
 
 .person-text h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  text-align: left;
+}
+
+.person-text h3 {
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align: left;
 }
 
 .person-text p {
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 2vw, 1rem);
   line-height: 1.5;
   word-wrap: normal;
-  width: 20vw;
+  max-width: 30vw;
+  text-align: left;
+  align-items: center;
 }
 
 /* Mobile and Tablet Responsive Styles */

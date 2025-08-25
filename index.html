@@ -20,14 +20,6 @@
       <nav class="navbar">
         <div class="header-left">
           <a href="index.html">
-            <div class="smiley">
-              <div class="smiley-animation">
-                <img
-                  src="assets/img/smiley/KVSymbolSmiley_RosaMørk.svg"
-                  alt="smiley logo"
-                />
-              </div>
-            </div>
             <div class="logo">
               <img
                 src="assets/img/hovedlogo/KVHovedLogo_RosaMørk.svg"
@@ -48,7 +40,7 @@
             <li class="nav-link"><a href="tjenester.html">Tjenester</a></li>
             <li class="nav-link"><a href="om-oss.html">Om oss</a></li>
             <li class="nav-link">
-              <a href="mailto:hei@kollegaogvenn.no">hei@kollegaogvenn.no</a>
+              <a href="mailto:hei@kollegaogvenn.no">Kontakt oss</a>
             </li>
           </ul>
         </div>
@@ -56,9 +48,28 @@
     </header>
 
     <main>
-      <div class="black-overlay"></div>
-      <section id="home" class="zoom-section">
-        <div class="smiley-zoom-container">
+      <section id="home" class="home-section">
+        <div class="home-container">
+          <div class="animation-text">
+            <div class="logo-scroll">
+              <img src="assets/img/hovedlogo/KVHovedLogo_RosaMørk.svg" />
+              <img
+                class="smiley-scroll"
+                src="assets/img/smiley/KVSymbolSmiley_RosaMørk.svg"
+              />
+              <img src="assets/img/hovedlogo/KVHovedLogo_RosaMørk.svg" />
+              <img
+                class="smiley-scroll"
+                src="assets/img/smiley/KVSymbolSmiley_RosaMørk.svg"
+              />
+              <img src="assets/img/hovedlogo/KVHovedLogo_RosaMørk.svg" />
+              <img
+                class="smiley-scroll"
+                src="assets/img/smiley/KVSymbolSmiley_RosaMørk.svg"
+              />
+            </div>
+          </div>
+
           <div class="smiley-home">
             <div>
               <img
@@ -66,46 +77,42 @@
                 alt="smiley logo"
               />
             </div>
-            <div class="grass-container">
-              <div class="ground-line">
-                <div class="grass-blade"></div>
-              </div>
-            </div>
           </div>
           <div class="home-text">
             <p>
-              Hos Kollega og venn er vi mer enn et kreativt managementbyrå. Vi
-              er dine nærmeste samarbeidspartnere og jobber side om side med
-              deg, som ekte lagspillere, for å løfte ideene dine til nye høyder.
-              Enten du trenger strategisk rådgivning, prosjektledelse eller
-              kreativ utvikling, står vi klare til å heie på deg og finne de
-              beste løsningene sammen. Med oss på laget får du både kompetanse
-              og kameratskap, akkurat slik du fortjener.
+              Vi ønsker å være din kollega og venn som rådgir, sparrer og
+              hjelper deg med innholdsproduksjon, strategi og resultatbasert
+              markedsføring.
             </p>
+            <p>
+              Kollega & Venn tror vi på kraften i gode relasjoner. Når
+              samarbeidet føles trygt og inspirerende, kommer både kreativiteten
+              og resultatene lettere. Sammen lager vi innhold som engasjerer og
+              markedsføring som leverer.
+            </p>
+            <p>Som en ekte kollega og venn.</p>
           </div>
-          <div class="scroll-container">
-            <div class="zoom-text">
-              <svg
-                id="zoomSVG"
-                width="400"
-                height="50"
-                viewBox="0 0 400 50"
-                class="scroll-arrows-text"
+          <div class="customer-button">
+            <svg
+              id="zoomSVG"
+              width="400"
+              height="50"
+              viewBox="0 0 400 50"
+              class="scroll-arrows-text"
+            >
+              <text
+                id="svgText"
+                x="200"
+                y="35"
+                text-anchor="middle"
+                font-family="var(--font-family-primary)"
+                font-size="24"
+                font-weight="bold"
+                fill="currentColor"
               >
-                <text
-                  id="svgText"
-                  x="200"
-                  y="35"
-                  text-anchor="middle"
-                  font-family="var(--font-family-primary)"
-                  font-size="24"
-                  font-weight="bold"
-                  fill="currentColor"
-                >
-                  Kunder vi har jobbet med
-                </text>
-              </svg>
-            </div>
+                Kunder vi har jobbet med
+              </text>
+            </svg>
           </div>
         </div>
         <div class="scroll-arrow">
@@ -118,7 +125,7 @@
       </section>
 
       <section id="customers" class="customers-section">
-        <div class="customer-zoom-text">
+        <div class="customer-text">
           <svg id="customerSVG" width="400" height="50" viewBox="0 0 400 50">
             <text
               id="customerText"
@@ -153,7 +160,9 @@
           </div>
         </div>
         <div class="footer-middle">
-          <p>&copy; 2025 Hjem-siden. Alle rettigheter reservert.</p>
+          <a href="index.html">
+            <img src="assets/img/altlogos/KVSymbol_RosaMørk.svg" alt="logo" />
+          </a>
         </div>
         <div class="footer-right">
           <p>
