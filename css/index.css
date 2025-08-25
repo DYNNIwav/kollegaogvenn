@@ -1,3 +1,7 @@
+#index {
+  overflow-x: hidden;
+}
+
 #home {
   max-height: 100vh;
   display: flex;
@@ -22,7 +26,7 @@ main {
 
 .home-container {
   height: 100vh;
-  width: 200vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -36,32 +40,28 @@ main {
 
 .logo-scroll {
   display: flex;
-  width: 300vw;
+  width: 100vw;
+  justify-content: flex-end;
   margin: 20px;
   animation: infiniteScroll 15s linear infinite;
 }
 .logo-scroll img {
-  width: 100vw;
-}
-
-.smiley-scroll {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  padding: 10px;
+  width: clamp(1000px, 10vw, 1500px);
+  height: auto;
 }
 
 @keyframes infiniteScroll {
   0% {
-    transform: translate(0);
+    transform: translate(100%);
   }
   100% {
-    transform: translate(-100vw);
+    transform: translate(-100%);
   }
 }
 .landing-container {
   position: relative;
   width: 100vw;
+  height: auto;
 }
 
 .home-text {
@@ -70,7 +70,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   flex-direction: column;
-  z-index: 10;
+
   max-width: 60vw;
   font-size: 1.4rem;
 }
@@ -220,112 +220,5 @@ main {
   .smiley-home img {
     width: 250px;
     height: auto;
-  }
-
-  /* Zoom text */
-  .zoom-text {
-    bottom: 80px;
-    width: 95vw;
-    max-width: none;
-    min-width: 280px;
-  }
-
-  .scroll-arrows-text {
-    font-size: 1.2rem;
-  }
-
-  /* Arrow positioning */
-  .scroll-arrow {
-    bottom: 30px;
-    font-size: 1.2rem;
-  }
-
-  /* Customer section */
-  .customers-section {
-    padding: 20px;
-  }
-
-  .customer-zoom-text {
-    width: 95vw;
-    max-width: none;
-    min-width: 280px;
-  }
-  .customer-carousel-text {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: var(--font-family-primary);
-    color: var(--font-color-primary);
-    filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5));
-    animation: slideshow 20s linear infinite;
-    transition: animation-play-state 0.3s ease;
-  }
-}
-
-/* Mobile styles (480px and below) */
-@media screen and (max-width: 480px) {
-  /* Even smaller smiley */
-  .smiley-home img {
-    width: 200px;
-  }
-
-  /* Smaller text */
-  #home p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .scroll-arrows-text {
-    font-size: 1rem;
-  }
-
-  /* Zoom text adjustments */
-  .zoom-text {
-    bottom: 60px;
-  }
-
-  /* Arrow */
-  .scroll-arrow {
-    bottom: 20px;
-    font-size: 1rem;
-  }
-
-  /* Grass line */
-  .ground-line {
-    width: 150px;
-    height: 6px;
-  }
-
-  /* Bounce animation - smaller on mobile */
-  @keyframes gravityBounce {
-    0% {
-      transform: translateY(0) scaleY(1);
-    }
-    15% {
-      transform: translateY(-80px) scaleY(1.1); /* Smaller bounce */
-    }
-    30% {
-      transform: translateY(4px) scaleY(0.9);
-    }
-    35% {
-      transform: translateY(0) scaleY(1);
-    }
-    50% {
-      transform: translateY(-40px) scaleY(1.05);
-    }
-    65% {
-      transform: translateY(2px) scaleY(0.95);
-    }
-    70% {
-      transform: translateY(0) scaleY(1);
-    }
-    80% {
-      transform: translateY(-15px) scaleY(1.02);
-    }
-    90% {
-      transform: translateY(1px) scaleY(0.98);
-    }
-    100% {
-      transform: translateY(0) scaleY(1);
-    }
   }
 }
