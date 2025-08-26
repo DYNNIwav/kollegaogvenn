@@ -6,10 +6,14 @@
   max-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-#home #customers {
-  transition: opacity 3s ease;
+#home-2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 body {
@@ -30,12 +34,37 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-top: 10vh;
 }
 
+.sticker-home-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30vw;
+}
+
+.Smiley-sticker-1 {
+  position: relative;
+
+  width: clamp(30px, 10vw, 100px);
+  height: auto;
+  transform: rotate(-45deg);
+}
+
+.Smiley-sticker-2 {
+  position: relative;
+
+  width: clamp(30px, 10vw, 100px);
+  height: auto;
+  transform: rotate(45deg);
+}
 .animation-text {
   position: relative;
   width: 100vw;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .logo-scroll {
@@ -58,11 +87,6 @@ main {
     transform: translate(-100%);
   }
 }
-.landing-container {
-  position: relative;
-  width: 100vw;
-  height: auto;
-}
 
 .home-text {
   display: flex;
@@ -70,136 +94,66 @@ main {
   left: 50%;
   transform: translateX(-50%);
   flex-direction: column;
+  margin-top: 20px;
 
-  max-width: 60vw;
-  font-size: 1.4rem;
+  max-width: 40vw;
+  font-size: clamp(1.5rem, 1.4vw, 2rem);
+  font-style: oblique;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
-.scroll-arrow {
-  position: fixed;
-
-  bottom: 10px;
-  z-index: 20;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2rem;
-  text-align: center;
-  animation: bounce 2s infinite;
-  opacity: var(--arrow-opacity, 1);
-  transition: opacity 0.3s ease;
+.home-2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
-
-.scroll-arrow ul {
-  list-style: none;
-  margin: 10px;
-  padding: 10px;
-}
-
-.scroll-arrow li {
-  text-align: center;
-}
-
-.customer-button {
-  position: fixed;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  outline: 2px solid var(--font-color-primary);
-}
-
-.customer-button:hover {
-  cursor: pointer;
-}
-
-.smiley-home img {
-  position: fixed;
+.home-text-2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  max-width: 100vw;
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.smiley-home img {
+  position: absolute;
   width: 40vw;
   height: auto;
   z-index: 0;
   opacity: 5%;
-}
-
-/* Customers section - fixed positioning during zoom-out */
-.customers-section {
-  position: fixed; /* Change from absolute to fixed during zoom phase */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: var(--customers-opacity, 0);
-
-  transform-origin: center center;
-  transition: opacity 0.5s ease;
-}
-
-.customer-zoom-text {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  z-index: 15;
-  width: 90vw;
-  max-width: 600px;
-  min-width: 300px;
 }
 
-#customerSVG {
-  width: 100%;
-  height: auto;
-  overflow: visible;
+.kontakt-knapp {
+  position: relative;
+  top: 85%;
 }
 
-.customer-carousel {
-  position: absolute;
-  top: 60vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.kontakt-knapp:hover {
+  cursor: pointer;
 }
 
-.customer-carousel-text {
-  font-size: 2.5rem;
+.kontakt-knapp h4 {
+  background-color: var(--font-color-primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: clamp(0.6rem, 1.4vw, 1.5rem);
   font-weight: bold;
-  font-family: var(--font-family-primary);
-  color: var(--font-color-primary);
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5));
-  animation: slideshow 20s linear infinite;
-  transition: animation-play-state 0.3s ease;
-}
-
-@keyframes slideshow {
-  0% {
-    transform: translate(100%);
-  }
-  100% {
-    transform: translate(-100%);
-  }
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Mobile and Tablet Responsive Styles */
