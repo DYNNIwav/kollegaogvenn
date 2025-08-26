@@ -1,8 +1,4 @@
-body {
-  overflow-x: hidden;
-}
-
-main {
+#kontakt-oss {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,16 +7,25 @@ main {
   width: 100vw;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
 .kontakt-oss-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .kontakt-oss-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
