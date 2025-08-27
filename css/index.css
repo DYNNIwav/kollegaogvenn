@@ -71,7 +71,7 @@ main {
   animation: infiniteScroll 25s linear infinite;
 }
 .logo-scroll img {
-  width: clamp(700px, 50vw, 950px);
+  width: clamp(1000px, 50vw, 1500px);
   height: auto;
 }
 

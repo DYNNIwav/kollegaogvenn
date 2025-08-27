@@ -4,7 +4,7 @@ footer {
   color: var(--font-color-primary);
   z-index: 100;
   position: relative;
-  margin-top: auto;
+  margin-top: 20px;
   overflow-x: hidden;
   box-sizing: border-box;
 }
