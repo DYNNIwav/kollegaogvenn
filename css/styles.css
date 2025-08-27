@@ -36,3 +36,39 @@ p {
   font-family: var(--font-family-body);
   color: var(--font-color-primary);
 }
+
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Smooth fade animations */
+[data-aos="fade-up"] {
+  transform: translate3d(0, 30px, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* Smooth side animations */
+[data-aos="fade-right"] {
+  transform: translate3d(-50px, 0, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+[data-aos="fade-left"] {
+  transform: translate3d(50px, 0, 0);
+  opacity: 0;
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
