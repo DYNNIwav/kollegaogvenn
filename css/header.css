@@ -6,13 +6,13 @@ header {
 
   z-index: 100;
   background-color: rgba(234, 196, 211, 0.9);
+  padding: 20px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 .header-left a {
@@ -89,10 +89,6 @@ a:hover {
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
-  .navbar {
-    margin: 15px;
-  }
-
   /* Show hamburger on mobile */
   .hamburger {
     display: flex;

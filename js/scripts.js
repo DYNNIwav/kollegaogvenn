@@ -1,5 +1,6 @@
-// Hamburger menu functionality
+// Replace your current scripts.js with this:
 document.addEventListener('DOMContentLoaded', function() {
+  // Hamburger menu functionality
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
   
@@ -26,15 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-});
 
-// Add this to your existing scripts.js file
-document.addEventListener('DOMContentLoaded', function() {
+  // Initialize AOS (only once!)
   AOS.init({
     duration: 1500,
-    once: true, // Animation happens only once when scrolling down
-    offset: 100 // Start animation 100px before element enters viewport
+    once: true,
+    offset: 0,
+    anchorPlacement: 'top-bottom', // This should fix the timing
   });
-  
-  // Your existing hamburger menu code stays the same...
 });
