@@ -7,10 +7,6 @@
   width: 100vw;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 main {
   display: flex;
   align-items: center;

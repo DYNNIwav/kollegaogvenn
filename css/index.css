@@ -1,24 +1,18 @@
-#index {
-  overflow-x: hidden;
-}
-
 #home {
   max-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 }
 
 #home-2 {
   max-height: 100vh;
-  max-width: 100vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 main {
@@ -32,6 +26,7 @@ main {
 .home-container {
   height: 100vh;
   width: 100vw;
+
   display: flex;
   flex-direction: column;
   position: relative;
@@ -63,20 +58,20 @@ main {
 }
 .animation-text {
   position: relative;
-  width: 100vw;
-  overflow: hidden;
+
   margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .logo-scroll {
   display: flex;
-  width: 100vw;
+
   justify-content: flex-end;
-  margin: 20px;
-  animation: infiniteScroll 15s linear infinite;
+
+  animation: infiniteScroll 25s linear infinite;
 }
 .logo-scroll img {
-  width: clamp(1000px, 10vw, 1500px);
+  width: clamp(700px, 50vw, 950px);
   height: auto;
 }
 
@@ -97,7 +92,7 @@ main {
   flex-direction: column;
   margin-top: 20px;
 
-  max-width: 40vw;
+  max-width: 60vw;
   font-size: clamp(1.5rem, 1.4vw, 2rem);
   font-style: oblique;
   font-weight: 300;
@@ -151,7 +146,7 @@ main {
   color: white;
   padding: 10px 20px;
   border-radius: 50px;
-  font-size: clamp(0.6rem, 1.4vw, 1.5rem);
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -179,19 +174,8 @@ main {
 
 /* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
-  /* Main content adjustments */
-  main {
-    padding: 20px 10px;
-  }
-
-  /* Text content */
-  #home p {
-    font-size: 1rem;
-  }
-
-  /* Smiley adjustments */
   .smiley-home img {
-    width: 250px;
+    width: 60vw;
     height: auto;
   }
 }

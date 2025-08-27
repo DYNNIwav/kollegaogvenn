@@ -1,11 +1,12 @@
 header {
-  width: 100vw;
+  width: 100dvw;
   height: auto;
   color: white;
   position: sticky;
   top: 0;
   left: 0;
-
+  overflow: hidden;
+  box-sizing: border-box;
   z-index: 100;
   background-color: rgba(234, 196, 211, 0.9);
 }
@@ -14,8 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
-  position: relative;
+  padding: 20px;
 }
 
 .header-left a {
@@ -105,18 +105,18 @@ a:hover {
   .nav-links {
     position: absolute;
     top: 100%;
-    right: -2%;
+    right: 0;
     background-color: rgba(234, 196, 211, 0.9);
+    opacity: 0;
     width: 250px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease;
     z-index: 100;
   }
 
   .nav-links.active {
-    transform: translateX(0);
+    opacity: 1;
   }
 
   .nav-links ul {

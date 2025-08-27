@@ -5,13 +5,14 @@ footer {
   z-index: 100;
   position: relative;
   margin-top: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .footer-container {
-  margin: 20px;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  padding: 0 20px;
   font-size: 1.2rem;
 }
 

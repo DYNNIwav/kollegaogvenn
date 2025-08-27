@@ -5,7 +5,6 @@
   background-color: var(--background-color-primary);
   color: var(--font-color-secondary);
   overflow-x: hidden;
-  position: relative;
 }
 
 .om-oss-container h1 {
