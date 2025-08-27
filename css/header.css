@@ -1,12 +1,9 @@
 header {
-  width: 100dvw;
-  height: auto;
   color: white;
   position: sticky;
   top: 0;
   left: 0;
-  overflow: hidden;
-  box-sizing: border-box;
+
   z-index: 100;
   background-color: rgba(234, 196, 211, 0.9);
 }
@@ -29,7 +26,7 @@ header {
 }
 
 .logo img {
-  width: clamp(30px, 10vw, 100px);
+  width: clamp(80px, 10vw, 100px);
   height: auto;
 }
 
@@ -105,18 +102,18 @@ a:hover {
   .nav-links {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -250px;
     background-color: rgba(234, 196, 211, 0.9);
-    opacity: 0;
+
     width: 250px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: opacity 0.3s ease;
+    transition: right 0.3s ease;
     z-index: 100;
   }
 
   .nav-links.active {
-    opacity: 1;
+    right: 0;
   }
 
   .nav-links ul {

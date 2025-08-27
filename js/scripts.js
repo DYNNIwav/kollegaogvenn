@@ -28,4 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-
+// Add this to your existing scripts.js file
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+    duration: 1500,
+    once: true, // Animation happens only once when scrolling down
+    offset: 100 // Start animation 100px before element enters viewport
+  });
+  
+  // Your existing hamburger menu code stays the same...
+});
