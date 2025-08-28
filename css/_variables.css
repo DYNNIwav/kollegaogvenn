@@ -2,10 +2,10 @@
   --color-primary: #eac4d3;
   --color-secondary: #b14e74;
 
-  /* Font Families */
-  --font-family-heading: "neulis sans semibold", "montserrat", sans-serif;
-  --font-family-subheading: "neulis sans regular", sans-serif;
-  --font-family-body: "neulis sans extra light", "montserrat", sans-serif;
+  /* Font Families - Updated to use your custom fonts */
+  --font-family-heading: "ClientFont", "montserrat", sans-serif;
+  --font-family-subheading: "ClientFont", "montserrat", sans-serif;
+  --font-family-body: "ClientFont", "montserrat", sans-serif;
 
   --font-size-h1: 2.5rem;
   --font-size-h2: 2rem;

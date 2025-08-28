@@ -1,11 +1,15 @@
 #om-oss {
   display: flex;
-  width: 100vw;
+  width: 100dvw;
   min-height: 100dvh;
   background-color: var(--background-color-primary);
   color: var(--font-color-secondary);
   overflow-x: hidden;
   padding-top: 0;
+}
+
+.cards-container {
+  margin-top: 8vh;
 }
 
 .om-oss-container h1 {
@@ -24,7 +28,6 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  min-height: calc(100vh - 10vh);
 
   padding-bottom: 2rem;
 }
@@ -52,6 +55,7 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
+  height: 100vh;
 }
 
 .person-card-embla {
@@ -59,6 +63,7 @@
   flex-direction: row-reverse;
   align-items: center;
   text-align: center;
+  height: 100vh;
 }
 
 .person-image {
@@ -126,16 +131,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 90vh;
   }
 
   .person-card-embla {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 90vh;
   }
 
   .person-image {
-    width: 350px;
+    width: 320px;
     height: auto;
   }
 

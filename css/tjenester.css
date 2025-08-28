@@ -17,6 +17,10 @@
   width: 100vw;
 }
 
+.tjenester-title {
+  font-size: 2rem;
+}
+
 .accordion {
   max-width: 800px;
   margin: 0 auto;

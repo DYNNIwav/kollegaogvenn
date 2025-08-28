@@ -1,4 +1,3 @@
-// Replace your current scripts.js with this:
 document.addEventListener('DOMContentLoaded', function() {
   // Hamburger menu functionality
   const hamburger = document.getElementById('hamburger');
@@ -28,29 +27,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Initialize AOS (only once!)
-  AOS.init({
-    duration: 1500,
-    once: true,
-    offset: 0,
-    anchorPlacement: 'top-bottom', // This should fix the timing
-  });
-});
+  // Perfect infinite scroll setup
+  const logoScroll = document.getElementById('logoScroll');
+  if (logoScroll) {
+    // First, duplicate the content
+    const scrollContent = logoScroll.innerHTML;
+    logoScroll.innerHTML = scrollContent + scrollContent;
+    
+    // Wait for images to load, then calculate exact width
+    setTimeout(() => {
+      const firstHalf = logoScroll.children.length / 2;
+      let totalWidth = 0;
+      
+      // Calculate width of first half (original content)
+      for (let i = 0; i < firstHalf; i++) {
+        const img = logoScroll.children[i];
+        const imgWidth = img.offsetWidth;
+        const imgMargin = parseInt(getComputedStyle(img).marginRight);
+        totalWidth += imgWidth + imgMargin;
+      }
+      
+      // Apply the exact animation distance
+      logoScroll.style.setProperty('--scroll-distance', `-${totalWidth}px`);
+      console.log('Scroll distance set to:', `-${totalWidth}px`);
+    }, 100);
+  }
 
-document.addEventListener('DOMContentLoaded', function() {
+  // Initialize AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 1500,
+      once: true,
+      offset: 0,
+      anchorPlacement: 'top-bottom',
+    });
+  }
+
+  // Accordion functionality
   const accordionHeaders = document.querySelectorAll('.accordion-header');
-
   accordionHeaders.forEach(header => {
     header.addEventListener('click', function() {
       const accordionItem = this.parentElement;
       const accordionContent = accordionItem.querySelector('.accordion-content');
       const isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-      // Close all other accordions (optional - for single open behavior)
+      // Close all other accordions
       accordionHeaders.forEach(otherHeader => {
         if (otherHeader !== this) {
           otherHeader.setAttribute('aria-expanded', 'false');
-          otherHeader.parentElement.querySelector('.accordion-content').classList.remove('active');
+          const otherContent = otherHeader.parentElement.querySelector('.accordion-content');
+          if (otherContent) {
+            otherContent.classList.remove('active');
+          }
         }
       });
 
@@ -60,5 +88,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
-

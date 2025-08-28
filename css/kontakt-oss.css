@@ -18,6 +18,8 @@ main {
 .kontakt-oss-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .kontakt-oss-container h1 {
@@ -28,21 +30,33 @@ main {
   display: relative;
 }
 
-.kontakt-oss-container h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-style: oblique;
-  text-align: center;
-}
-
-.kontakt-oss-container p {
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: center;
+.kontakt-oss-container a {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .kontakt-oss-info {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+
+.kontakt-oss-info i {
+  margin-right: 10px;
+}
+
+.smiley-bg {
+  position: absolute;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.smiley-bg img {
+  position: relative;
+  width: 40vw;
+  height: auto;
+  z-index: 0;
+  opacity: 5%;
 }

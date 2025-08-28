@@ -56,18 +56,11 @@ main {
 .Smiley-sticker-1 {
   position: relative;
 
-  width: clamp(30px, 10vw, 100px);
+  width: clamp(30px, 10vw, 110px);
   height: auto;
-  transform: rotate(-45deg);
+  margin-bottom: 20px;
 }
 
-.Smiley-sticker-2 {
-  position: relative;
-
-  width: clamp(30px, 10vw, 100px);
-  height: auto;
-  transform: rotate(45deg);
-}
 .animation-text {
   position: relative;
 
@@ -75,22 +68,30 @@ main {
   margin-bottom: 60px;
 }
 
+.logo-scroll-container {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .logo-scroll {
   display: flex;
-
-  animation: infiniteScroll 25s linear infinite;
+  width: max-content;
+  animation: infiniteScroll 20s linear infinite;
 }
+
 .logo-scroll img {
-  width: clamp(1000px, 50vw, 1500px);
+  width: clamp(600px, 50vw, 800px); /* Adjust size as needed */
   height: auto;
+  margin-right: 30px; /* Space between logos */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 @keyframes infiniteScroll {
   0% {
-    transform: translate(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translate(-100%);
+    transform: translateX(-50%); /* Move exactly half the width */
   }
 }
 
@@ -103,10 +104,19 @@ main {
   margin-top: 20px;
 
   max-width: 80vw;
-  font-size: clamp(1.2rem, 1.4vw, 2rem);
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
   font-style: oblique;
   font-weight: 300;
   line-height: 1.5;
+}
+
+.home-text-pt1,
+.home-text-pt2 {
+  margin: 0;
+}
+
+.home-text-pt3 {
+  margin: 20px;
 }
 
 .home-2-container {
@@ -130,14 +140,14 @@ main {
   line-height: 1.2;
 }
 
-.smiley-home {
+.smiley-bg {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.smiley-home img {
+.smiley-bg img {
   position: relative;
   width: 40vw;
   height: auto;
