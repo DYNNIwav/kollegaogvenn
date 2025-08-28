@@ -43,7 +43,22 @@ main {
 }
 
 .kontakt-oss-info i {
-  margin-right: 10px;
+  display: inline-block;
+  width: 20px; /* Fixed width for all icons */
+  height: 20px; /* Fixed height for all icons */
+  margin-right: 12px; /* Consistent spacing after icon */
+  text-align: center; /* Center the icon within its container */
+
+  font-size: 1.4rem; /* Consistent icon size */
+  line-height: 20px; /* Match the height for perfect centering */
+}
+
+.kontakt-oss-info a {
+  display: flex;
+  align-items: center; /* Vertically center icon and text */
+  font-family: var(--font-family-body);
+  text-decoration: none;
+  color: var(--font-color-primary);
 }
 
 .smiley-bg {

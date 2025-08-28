@@ -26,7 +26,8 @@ footer {
 .footer-content img {
   width: 100px;
   height: auto;
-  position: relative;
+  display: block;
+  margin: 0 auto;
 }
 
 .footer-content i {
@@ -36,11 +37,11 @@ footer {
   margin-right: 12px; /* Consistent spacing after icon */
   text-align: center; /* Center the icon within its container */
 
-  font-size: 16px; /* Consistent icon size */
+  font-size: 1.4rem; /* Consistent icon size */
   line-height: 20px; /* Match the height for perfect centering */
 }
 
-footer .footer-content a {
+.footer-content a {
   display: flex;
   align-items: center; /* Vertically center icon and text */
   font-family: var(--font-family-body);
