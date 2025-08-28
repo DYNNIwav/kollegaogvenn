@@ -102,8 +102,8 @@ main {
   flex-direction: column;
   margin-top: 20px;
 
-  max-width: 60vw;
-  font-size: clamp(1rem, 1.4vw, 2rem);
+  max-width: 80vw;
+  font-size: clamp(1.2rem, 1.4vw, 2rem);
   font-style: oblique;
   font-weight: 300;
   line-height: 1.5;
@@ -123,9 +123,9 @@ main {
   display: flex;
   flex-direction: column;
   top: 25%;
-  width: 70vw;
+  width: 80vw;
   max-width: 100vw;
-  font-size: clamp(1rem, 1.4vw, 2rem);
+  font-size: clamp(1.2rem, 1.4vw, 2rem);
 
   line-height: 1.2;
 }
@@ -171,6 +171,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100vw;
+  height: 100vh;
 }
 
 .instagram-carousel {
@@ -188,7 +189,7 @@ main {
 /* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
   .smiley-home img {
-    width: 60vw;
+    width: 80vw;
     height: auto;
   }
 }

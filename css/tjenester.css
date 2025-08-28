@@ -8,18 +8,6 @@
   width: 100vw;
 }
 
-h1 {
-  font-size: 4rem;
-  font-weight: 300;
-  font-style: oblique;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .tjenester-container {
   display: flex;
   flex-direction: column;
@@ -38,11 +26,11 @@ h1 {
   border-bottom: 2px solid var(--font-color-primary);
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 40vw;
 }
 
 .accordion-header {
-  width: 60vw;
+  width: 40vw;
   padding: 20px 20px 0;
   background: none;
   border: none;
@@ -96,4 +84,14 @@ h1 {
 
 .accordion-content.active .accordion-body {
   transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .accordion-header,
+  .accordion-body {
+  }
+  .accordion-item,
+  .accordion-header {
+    width: 80vw;
+  }
 }
