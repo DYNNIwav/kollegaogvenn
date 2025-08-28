@@ -80,7 +80,7 @@ main {
 }
 
 .logo-scroll img {
-  width: clamp(600px, 50vw, 800px); /* Adjust size as needed */
+  width: clamp(800px, 80vw, 1500px); /* Adjust size as needed */
   height: auto;
   margin-right: 30px; /* Space between logos */
   flex-shrink: 0; /* Prevent shrinking */
@@ -198,7 +198,7 @@ main {
 
 /* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
-  .smiley-home img {
+  .smiley-bg img {
     width: 80vw;
     height: auto;
   }

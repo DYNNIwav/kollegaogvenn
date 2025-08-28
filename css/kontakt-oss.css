@@ -60,3 +60,10 @@ main {
   z-index: 0;
   opacity: 5%;
 }
+
+@media screen and (max-width: 768px) {
+  .smiley-bg img {
+    width: 80vw;
+    height: auto;
+  }
+}
