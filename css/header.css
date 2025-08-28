@@ -1,9 +1,8 @@
 header {
-  color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-
+  width: 100vw;
   z-index: 100;
   background-color: rgba(234, 196, 211, 0.9);
   padding: 20px;

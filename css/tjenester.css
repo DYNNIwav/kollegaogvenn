@@ -78,17 +78,20 @@
   line-height: 1.5;
   text-align: left;
   color: var(--font-color-secondary);
-  transform: translateY(-80px);
-  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
 }
 
 .accordion-content.active .accordion-body {
   transform: translateY(0);
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
   .accordion-header,
   .accordion-body {
+    font-size: 1rem;
   }
   .accordion-item,
   .accordion-header {
