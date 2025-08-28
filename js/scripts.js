@@ -36,3 +36,27 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorPlacement: 'top-bottom', // This should fix the timing
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const accordionItem = this.parentElement;
+      const accordionContent = accordionItem.querySelector('.accordion-content');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+      // Close all other accordions (optional - for single open behavior)
+      accordionHeaders.forEach(otherHeader => {
+        if (otherHeader !== this) {
+          otherHeader.setAttribute('aria-expanded', 'false');
+          otherHeader.parentElement.querySelector('.accordion-content').classList.remove('active');
+        }
+      });
+
+      // Toggle current accordion
+      this.setAttribute('aria-expanded', !isExpanded);
+      accordionContent.classList.toggle('active');
+    });
+  });
+});
