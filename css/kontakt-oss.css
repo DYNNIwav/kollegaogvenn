@@ -23,15 +23,16 @@ main {
 }
 
 .kontakt-oss-container h1 {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 2vw, 2rem);
   font-weight: 600;
   font-style: oblique;
   text-align: center;
   display: relative;
+  margin-bottom: 50px;
 }
 
 .kontakt-oss-container a {
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   font-weight: bold;
 }
 

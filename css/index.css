@@ -28,6 +28,15 @@
   position: relative;
 }
 
+#home-img {
+  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -61,51 +70,37 @@ main {
   margin-bottom: 20px;
 }
 
-.animation-text {
+.home-logo-container {
   position: relative;
 
   margin-top: 20px;
   margin-bottom: 60px;
-}
-
-.logo-scroll-container {
   width: 100vw;
   overflow-x: hidden;
 }
 
-.logo-scroll {
+.home-logo {
   display: flex;
-  width: max-content;
-  animation: infiniteScroll 20s linear infinite;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo-scroll img {
-  width: clamp(800px, 80vw, 1500px); /* Adjust size as needed */
+.home-logo img {
+  width: clamp(800px, 80vw, 1200px);
   height: auto;
-  margin-right: 30px; /* Space between logos */
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-@keyframes infiniteScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Move exactly half the width */
-  }
 }
 
 .home-text {
   display: flex;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  align-items: center;
+  justify-content: center;
   text-align: center;
   flex-direction: column;
   margin-top: 20px;
 
   max-width: 80vw;
-  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
   font-style: oblique;
 
   line-height: 1.5;
@@ -118,6 +113,43 @@ main {
 
 .home-text-pt3 {
   margin: 20px;
+}
+
+.home-img-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+
+.home-img-container img {
+  width: 550px;
+  height: auto;
+}
+
+.home-img-1 {
+  width: 550px;
+  height: auto;
+  position: relative;
+  left: 20px;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img-2 {
+  width: 550px;
+  height: auto;
+  position: relative;
+  right: 0;
+  top: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-2-container {
@@ -193,14 +225,46 @@ main {
 
 /* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
+  #home-img {
+    height: 70vh;
+  }
+
+  .home-logo img {
+    width: 80vw;
+  }
+
+  .home-text {
+    font-size: 0.8rem;
+  }
+
   .smiley-bg img {
     width: 80vw;
     height: auto;
   }
   .home-text-2 {
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
   }
-  .Smiley-sticker-1 {
+
+  .home-img-container {
+    width: 100vw;
+  }
+
+  .home-img-container img {
+    width: 50vw;
+    margin-bottom: 80px;
+  }
+  .home-img-1 {
+    width: 50vw;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .home-img-2 {
+    width: 50vw;
+    height: auto;
+    position: relative;
+    right: 0;
   }
 }

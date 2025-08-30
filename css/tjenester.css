@@ -101,4 +101,8 @@
   .accordion-header {
     width: 80vw;
   }
+
+  .tjenester-title {
+    font-size: 1.5rem;
+  }
 }

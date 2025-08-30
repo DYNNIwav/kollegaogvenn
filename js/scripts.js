@@ -27,31 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Perfect infinite scroll setup
-  const logoScroll = document.getElementById('logoScroll');
-  if (logoScroll) {
-    // First, duplicate the content
-    const scrollContent = logoScroll.innerHTML;
-    logoScroll.innerHTML = scrollContent + scrollContent;
-    
-    // Wait for images to load, then calculate exact width
-    setTimeout(() => {
-      const firstHalf = logoScroll.children.length / 2;
-      let totalWidth = 0;
-      
-      // Calculate width of first half (original content)
-      for (let i = 0; i < firstHalf; i++) {
-        const img = logoScroll.children[i];
-        const imgWidth = img.offsetWidth;
-        const imgMargin = parseInt(getComputedStyle(img).marginRight);
-        totalWidth += imgWidth + imgMargin;
-      }
-      
-      // Apply the exact animation distance
-      logoScroll.style.setProperty('--scroll-distance', `-${totalWidth}px`);
-      console.log('Scroll distance set to:', `-${totalWidth}px`);
-    }, 100);
-  }
+  
 
   // Initialize AOS
   if (typeof AOS !== 'undefined') {
