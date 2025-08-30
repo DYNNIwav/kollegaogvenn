@@ -135,10 +135,20 @@ main {
   position: relative;
   left: 20px;
   top: 0;
-
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.home-img-1 img,
+.home-img-2 img {
+  outline: 15px solid #ffffff;
+}
+
+.home-img-1:hover,
+.home-img-2:hover {
+  z-index: 10;
 }
 
 .home-img-1:hover img {
@@ -159,6 +169,7 @@ main {
   position: relative;
   right: 0;
   top: 250px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,6 +213,10 @@ main {
 
 .kontakt-knapp {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-top: 25%;
 }
 
