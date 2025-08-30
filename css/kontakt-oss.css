@@ -83,3 +83,9 @@ main {
     height: auto;
   }
 }
+
+@media screen and (min-width: 3000px) {
+  .smiley-bg img {
+    width: 30vw;
+  }
+}

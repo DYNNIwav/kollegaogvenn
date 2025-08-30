@@ -135,10 +135,22 @@ main {
   position: relative;
   left: 20px;
   top: 0;
-  z-index: 1;
+
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.home-img-1:hover img {
+  cursor: pointer;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.home-img-2:hover img {
+  cursor: pointer;
+  transform: rotate(5deg);
+  transition: transform 0.3s ease-in-out;
 }
 
 .home-img-2 {
@@ -266,5 +278,18 @@ main {
     height: auto;
     position: relative;
     right: 0;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .home-text-2 {
+    max-width: 35vw;
+  }
+  .kontakt-knapp {
+    margin-top: 15%;
+  }
+
+  .smiley-bg img {
+    width: 30vw;
   }
 }

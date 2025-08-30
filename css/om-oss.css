@@ -160,3 +160,14 @@
     max-width: 320px;
   }
 }
+
+@media screen and (min-width: 3000px) {
+  .om-oss-text {
+    width: 30vw;
+  }
+
+  .person-card-charlotte,
+  .person-card-embla {
+    width: 30vw;
+  }
+}
