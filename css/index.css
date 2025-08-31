@@ -143,7 +143,7 @@ main {
 
 .home-img-1 img,
 .home-img-2 img {
-  outline: 15px solid #ffffff;
+  outline: 20px solid #ffffff;
 }
 
 .home-img-1:hover,
@@ -153,14 +153,19 @@ main {
 
 .home-img-1:hover img {
   cursor: pointer;
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
   transition: transform 0.3s ease-in-out;
 }
 
 .home-img-2:hover img {
   cursor: pointer;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   transition: transform 0.3s ease-in-out;
+}
+
+.home-img-1:hover a,
+.home-img-2:hover a {
+  opacity: 1;
 }
 
 .home-img-2 {
@@ -282,17 +287,21 @@ main {
     margin-bottom: 80px;
   }
   .home-img-1 {
-    width: 50vw;
+    width: 40vw;
     height: auto;
     position: relative;
     left: 0;
     top: 0;
   }
   .home-img-2 {
-    width: 50vw;
+    width: 40vw;
     height: auto;
     position: relative;
     right: 0;
+  }
+  .home-img-1 img,
+  .home-img-2 img {
+    outline: 12px solid #ffffff;
   }
 }
 
