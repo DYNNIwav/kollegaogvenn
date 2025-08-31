@@ -1,7 +1,7 @@
 #om-oss {
   display: flex;
-  width: 100ddvw;
-  min-height: 100ddvh;
+  width: 100dvw;
+  min-height: 100dvh;
   background-color: var(--background-color-primary);
   color: var(--font-color-secondary);
   overflow-x: hidden;
@@ -9,7 +9,7 @@
 }
 
 .cards-container {
-  margin-top: 8dvh;
+  margin-top: 8vh;
 }
 
 .om-oss-text {
@@ -18,9 +18,9 @@
   font-style: oblique;
   margin-bottom: 80px;
   height: max-content;
-  width: 60dvw;
+  width: 60vw;
   position: relative;
-  margin-top: 20dvh;
+  margin-top: 20vh;
   text-align: left;
 }
 
@@ -29,14 +29,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100dvw;
+  width: 100vw;
 
   padding-bottom: 2rem;
 }
 
 .om-oss-header {
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
+  height: calc(100vh - env(safe-area-inset-top));
   margin-bottom: 100px;
 }
 
@@ -58,7 +59,7 @@
   flex-direction: row-reverse;
   align-items: center;
   text-align: center;
-  height: 100dvh;
+  height: 100vh;
 }
 
 .person-image {
@@ -69,23 +70,23 @@
 }
 
 .person-text h2 {
-  font-size: clamp(1rem, 2dvw, 2rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-bottom: 10px;
   text-align: left;
 }
 
 .person-text h4 {
-  font-size: clamp(1rem, 2dvw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   margin-bottom: 10px;
   margin-top: 0;
   text-align: left;
 }
 
 .person-text p {
-  font-size: clamp(0.5rem, 2dvw, 1.2rem);
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
   line-height: 1.5;
   word-wrap: normal;
-  max-width: 30dvw;
+  max-width: 30vw;
   text-align: left;
   align-items: center;
 }
@@ -111,7 +112,7 @@
   }
 
   .om-oss-text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     width: 320px;
     margin-bottom: 0;
     text-align: left;
@@ -129,14 +130,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    height: 100vh;
   }
 
   .person-card-embla {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    height: 100vh;
   }
 
   .person-image {
@@ -160,11 +161,11 @@
 
 @media screen and (min-width: 3000px) {
   .om-oss-text {
-    width: 30dvw;
+    width: 30vw;
   }
 
   .person-card-charlotte,
   .person-card-embla {
-    width: 30dvw;
+    width: 30vw;
   }
 }

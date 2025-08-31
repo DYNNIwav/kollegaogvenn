@@ -2,7 +2,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100dvw;
+  width: 100vw;
   z-index: 100;
   background-color: rgba(234, 196, 211, 0.9);
   padding: 20px;
@@ -26,7 +26,7 @@ header {
 }
 
 .logo img {
-  width: clamp(80px, 10dvw, 100px);
+  width: clamp(80px, 10vw, 100px);
   height: auto;
 }
 
