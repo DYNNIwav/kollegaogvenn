@@ -21,6 +21,7 @@
   width: 60dvw;
   position: relative;
   margin-top: 20dvh;
+  text-align: left;
 }
 
 .om-oss-container {
@@ -128,14 +129,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90dvh;
+    height: 100dvh;
   }
 
   .person-card-embla {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90dvh;
+    height: 100dvh;
   }
 
   .person-image {
