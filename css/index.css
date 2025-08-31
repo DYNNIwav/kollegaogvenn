@@ -1,7 +1,7 @@
 #home {
-  max-height: 100vh;
-  height: 100vh;
-  width: 100vw;
+  max-height: 100dvh;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,27 +11,27 @@
 }
 
 #home-2 {
-  max-height: 100vh;
-  height: 100vh;
-  width: 100vw;
+  max-height: 100dvh;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 #home-3 {
-  max-height: 100vh;
-  height: 100vh;
-  width: 100vw;
+  max-height: 100dvh;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 #home-img {
-  max-height: 100vh;
-  height: 100vh;
-  width: 100vw;
+  max-height: 100dvh;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -46,8 +46,8 @@ main {
 }
 
 .home-container {
-  max-height: 100vh;
-  width: 100vw;
+  max-height: 100dvh;
+  width: 100dvw;
 
   display: flex;
   flex-direction: column;
@@ -55,17 +55,17 @@ main {
 }
 
 .sticker-home-container {
-  width: 100vw;
+  width: 100dvw;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 30vw;
+  gap: 30dvw;
 }
 
 .Smiley-sticker-1 {
   position: relative;
 
-  width: clamp(30px, 20vw, 110px);
+  width: clamp(30px, 20dvw, 110px);
   height: auto;
   margin-bottom: 20px;
 }
@@ -75,7 +75,7 @@ main {
 
   margin-top: 20px;
   margin-bottom: 60px;
-  width: 100vw;
+  width: 100dvw;
   overflow-x: hidden;
 }
 
@@ -83,10 +83,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .home-logo img {
-  width: clamp(800px, 80vw, 1200px);
+  width: clamp(800px, 80dvw, 1000px);
   height: auto;
 }
 
@@ -99,8 +100,8 @@ main {
   flex-direction: column;
   margin-top: 20px;
 
-  max-width: 80vw;
-  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  max-width: 80dvw;
+  font-size: clamp(1rem, 1.4dvw, 1.3rem);
   font-style: oblique;
 
   line-height: 1.5;
@@ -120,7 +121,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100dvw;
   position: relative;
 }
 
@@ -185,8 +186,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  max-height: 100vh;
+  width: 100dvw;
+  max-height: 100dvh;
 }
 
 .home-text-2 {
@@ -194,9 +195,9 @@ main {
   display: flex;
   flex-direction: column;
   top: 25%;
-  width: 80vw;
-  max-width: 100vw;
-  font-size: clamp(1.2rem, 1.4vw, 2rem);
+  width: 80dvw;
+  max-width: 100dvw;
+  font-size: clamp(1.2rem, 1.4dvw, 2rem);
 
   line-height: 1.2;
 }
@@ -210,7 +211,7 @@ main {
 
 .smiley-bg img {
   position: relative;
-  width: 40vw;
+  width: 40dvw;
   height: auto;
   z-index: 0;
   opacity: 5%;
@@ -234,7 +235,7 @@ main {
   color: white;
   padding: 10px 20px;
   border-radius: 50px;
-  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  font-size: clamp(1rem, 1.4dvw, 1.5rem);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -246,23 +247,23 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 .instagram-carousel {
-  width: 80vw;
-  height: 100vh;
+  width: 80dvw;
+  height: 100dvh;
 }
 
 /* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
   #home-img {
-    height: 70vh;
+    height: 70dvh;
   }
 
   .home-logo img {
-    width: 80vw;
+    width: 80dvw;
   }
 
   .home-text {
@@ -270,7 +271,7 @@ main {
   }
 
   .smiley-bg img {
-    width: 80vw;
+    width: 80dvw;
     height: auto;
   }
   .home-text-2 {
@@ -279,22 +280,22 @@ main {
   }
 
   .home-img-container {
-    width: 100vw;
+    width: 100dvw;
   }
 
   .home-img-container img {
-    width: 50vw;
+    width: 50dvw;
     margin-bottom: 80px;
   }
   .home-img-1 {
-    width: 40vw;
+    width: 40dvw;
     height: auto;
     position: relative;
     left: 0;
     top: 0;
   }
   .home-img-2 {
-    width: 40vw;
+    width: 40dvw;
     height: auto;
     position: relative;
     right: 0;
@@ -307,13 +308,13 @@ main {
 
 @media screen and (min-width: 3000px) {
   .home-text-2 {
-    max-width: 35vw;
+    max-width: 35dvw;
   }
   .kontakt-knapp {
     margin-top: 15%;
   }
 
   .smiley-bg img {
-    width: 30vw;
+    width: 30dvw;
   }
 }

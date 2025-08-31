@@ -26,7 +26,7 @@ header {
 }
 
 .logo img {
-  width: clamp(80px, 10vw, 100px);
+  width: clamp(80px, 10dvw, 100px);
   height: auto;
 }
 
