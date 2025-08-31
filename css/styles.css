@@ -109,3 +109,23 @@ p {
 [data-aos].aos-animate {
   pointer-events: auto; /* After animation */
 }
+
+/* Messenger browser specific fixes */
+@media screen and (max-width: 768px) {
+  #om-oss {
+    touch-action: pan-y !important;
+    overflow-y: auto !important;
+  }
+
+  .om-oss-container {
+    touch-action: pan-y !important;
+    pointer-events: auto !important;
+  }
+
+  .person-card-charlotte,
+  .person-card-embla {
+    height: auto !important;
+    min-height: 50vh !important;
+    margin-bottom: 3rem !important;
+  }
+}

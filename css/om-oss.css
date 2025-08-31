@@ -31,6 +31,8 @@
   justify-content: center;
   width: 100vw;
   padding-bottom: 2rem;
+  touch-action: pan-y;
+  overflow-y: visible;
 }
 
 .om-oss-header {
@@ -50,7 +52,9 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
-  height: max-content;
+  height: auto;
+  min-height: 60vh;
+  margin-bottom: 4rem;
 }
 
 .person-card-embla {
@@ -58,7 +62,9 @@
   flex-direction: row-reverse;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  height: auto;
+  min-height: 60vh;
+  margin-bottom: 4rem;
 }
 
 .person-image {
@@ -132,14 +138,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
+    min-height: 50vh;
+    margin-bottom: 3rem;
   }
 
   .person-card-embla {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
+    min-height: 50vh;
+    margin-bottom: 3rem;
   }
 
   .person-image {
