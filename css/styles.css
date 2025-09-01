@@ -12,10 +12,22 @@ html {
   /* 2025 iOS Safari scroll optimizations */
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Ensure safe areas are filled with background color */
+  background-color: var(--color-primary);
+  height: 100%;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Critical: Ensure proper safe area background coverage */
+@supports (padding: max(0px)) {
+  body {
+    /* Use max() to ensure minimum padding in safe areas */
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
 }
 
 body {
@@ -24,6 +36,9 @@ body {
   background-color: var(--color-primary);
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
+  /* Extend into safe areas for proper coverage */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   max-width: 100vw;
   overflow-x: hidden;
   display: grid;
@@ -33,9 +48,6 @@ body {
   touch-action: pan-y;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* iOS safe area support - prevents stuttering near notch/home indicator */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 h1,
@@ -112,9 +124,6 @@ p {
     min-height: 100vh !important;
     min-height: calc(var(--vh, 1vh) * 100) !important;
     height: auto !important;
-    /* iOS safe area adjustments for mobile */
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
   }
 
   /* Let #home-2 and #home-img use their own responsive styles */
@@ -122,8 +131,6 @@ p {
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);
     height: auto;
-    /* iOS safe area adjustments for mobile */
-    padding-bottom: env(safe-area-inset-bottom);
   }
 
   #home-img {
