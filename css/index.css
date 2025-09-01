@@ -1,8 +1,12 @@
 #home {
+  /* Fallback for older browsers */
   max-height: 100vh;
   height: 100vh;
-  height: calc(100vh - env(safe-area-inset-top));
   width: 100vw;
+  /* Modern dynamic viewport units */
+  max-height: 100dvh;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,29 +16,25 @@
 }
 
 #home-2 {
+  /* Fallback for older browsers */
   max-height: 100vh;
   height: 100vh;
-  height: calc(100vh - env(safe-area-inset-top));
   width: 100vw;
+  /* Modern dynamic viewport units */
+  max-height: 100dvh;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-#home-3 {
-  max-height: 0;
-  height: 0;
-  height: calc(0 - env(safe-area-inset-top));
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  visibility: hidden;
 }
 
 #home-img {
   height: auto;
+  /* Fallback for older browsers */
   width: 100vw;
+  /* Modern dynamic viewport units */
+  width: 100dvw;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -49,8 +49,12 @@ main {
 }
 
 .home-container {
+  /* Fallback for older browsers */
   max-height: 100vh;
   width: 100vw;
+  /* Modern dynamic viewport units */
+  max-height: 100dvh;
+  width: 100dvw;
 
   display: flex;
   flex-direction: column;
@@ -58,7 +62,10 @@ main {
 }
 
 .sticker-home-container {
+  /* Fallback for older browsers */
   width: 100vw;
+  /* Modern dynamic viewport units */
+  width: 100dvw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -188,8 +195,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Fallback for older browsers */
   width: 100vw;
   max-height: 100vh;
+  /* Modern dynamic viewport units */
+  width: 100dvw;
+  max-height: 100dvh;
 }
 
 .home-text-2 {
@@ -301,6 +312,10 @@ main {
   }
 
   .home-img-2 {
+    /* Dynamic viewport units for better mobile experience */
+    margin-top: clamp(4dvh, 8dvh, 10dvh);
+    margin-left: clamp(-2rem, -8dvw, -4rem);
+    /* Fallback for older browsers */
     margin-top: clamp(4vh, 8vh, 10vh);
     margin-left: clamp(-2rem, -8vw, -4rem);
   }
