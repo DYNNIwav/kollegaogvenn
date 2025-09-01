@@ -1,13 +1,27 @@
-// Fix for in-app browsers viewport issues
+// Industry-standard viewport height solution for iOS Safari and mobile browsers
+// This prevents stuttering and jumping caused by dynamic viewport units (dvh/dvw)
 function setViewportHeight() {
+  // Calculate 1% of the current viewport height
   const vh = window.innerHeight * 0.01;
+  // Set CSS custom property --vh to the root element
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-// Set initial viewport height and update on resize/orientation change
+// Set initial value
 setViewportHeight();
-window.addEventListener('resize', setViewportHeight);
-window.addEventListener('orientationchange', setViewportHeight);
+
+// Update on resize (throttled to prevent performance issues)
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(setViewportHeight, 100);
+});
+
+// Update on orientation change (iOS Safari specific)
+window.addEventListener('orientationchange', () => {
+  // Delay to ensure new viewport dimensions are available after rotation
+  setTimeout(setViewportHeight, 150);
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   // Hamburger menu functionality
@@ -43,10 +57,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({
-      duration: 1500,
+      duration: 1200,
       once: true,
-      offset: 0,
-      anchorPlacement: 'top-bottom',
+      offset: 120,
+      anchorPlacement: 'top-center',
+      disable: function() {
+        // Disable on very small screens to avoid spacing issues
+        var maxWidth = 480;
+        return window.innerWidth < maxWidth;
+      }
     });
   }
 

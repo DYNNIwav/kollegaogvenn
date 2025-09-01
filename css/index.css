@@ -1,44 +1,44 @@
 #home {
-  /* Fallback for older browsers */
-  max-height: 100vh;
+  /* Use stable viewport height with custom property fallback */
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
-  /* Modern dynamic viewport units */
-  max-height: 100dvh;
-  height: 100dvh;
-  width: 100dvw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+  /* Hardware acceleration for iOS Safari */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 #home-2 {
-  /* Fallback for older browsers */
-  max-height: 100vh;
-  height: 100vh;
+  /* Use stable viewport height with custom property fallback */
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
-  /* Modern dynamic viewport units */
-  max-height: 100dvh;
-  height: 100dvh;
-  width: 100dvw;
   display: flex;
   flex-direction: column;
   position: relative;
+  /* Hardware acceleration for iOS Safari */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 #home-img {
-  height: auto;
-  /* Fallback for older browsers */
+  /* Use stable viewport height with custom property fallback */
+  min-height: 50vh;
+  min-height: calc(var(--vh, 1vh) * 50);
   width: 100vw;
-  /* Modern dynamic viewport units */
-  width: 100dvw;
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 0;
+  /* Hardware acceleration for iOS Safari */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 main {
@@ -49,23 +49,17 @@ main {
 }
 
 .home-container {
-  /* Fallback for older browsers */
+  /* Use stable viewport height with custom property fallback */
   max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
-  /* Modern dynamic viewport units */
-  max-height: 100dvh;
-  width: 100dvw;
-
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 .sticker-home-container {
-  /* Fallback for older browsers */
   width: 100vw;
-  /* Modern dynamic viewport units */
-  width: 100dvw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -135,7 +129,7 @@ main {
   max-width: 100vw;
   position: relative;
   min-height: auto;
-  overflow: visible;
+
   padding: 2rem;
   box-sizing: border-box;
 }
@@ -195,23 +189,21 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Fallback for older browsers */
   width: 100vw;
-  max-height: 100vh;
-  /* Modern dynamic viewport units */
-  width: 100dvw;
-  max-height: 100dvh;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 2rem 0;
 }
 
 .home-text-2 {
   position: relative;
   display: flex;
   flex-direction: column;
-  top: 25%;
   width: 80vw;
   max-width: 100vw;
   font-size: clamp(1.2rem, 1.4vw, 2rem);
-
+  text-align: center;
+  margin: 2rem 0;
   line-height: 1.2;
 }
 
@@ -236,7 +228,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 25%;
+  margin-top: 2rem;
 }
 
 .kontakt-knapp:hover {
@@ -272,7 +264,8 @@ main {
 /* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
   #home-img {
-    height: auto;
+    min-height: 40vh;
+    min-height: calc(var(--vh, 1vh) * 40);
     padding: 0;
   }
 
@@ -290,7 +283,11 @@ main {
   }
   .home-text-2 {
     font-size: 1rem;
-    margin-bottom: 80px;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .kontakt-knapp {
+    margin-top: 1rem;
   }
 
   .home-img-container {
@@ -312,10 +309,6 @@ main {
   }
 
   .home-img-2 {
-    /* Dynamic viewport units for better mobile experience */
-    margin-top: clamp(4dvh, 8dvh, 10dvh);
-    margin-left: clamp(-2rem, -8dvw, -4rem);
-    /* Fallback for older browsers */
     margin-top: clamp(4vh, 8vh, 10vh);
     margin-left: clamp(-2rem, -8vw, -4rem);
   }
