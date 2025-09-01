@@ -9,9 +9,6 @@
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  /* Hardware acceleration for iOS Safari */
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 #home-2 {
@@ -22,9 +19,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  /* Hardware acceleration for iOS Safari */
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 #home-img {
@@ -36,9 +30,6 @@
   flex-direction: column;
   position: relative;
   padding: 0;
-  /* Hardware acceleration for iOS Safari */
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 main {

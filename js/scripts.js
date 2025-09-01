@@ -57,15 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({
-      duration: 1200,
+      duration: 1000,
       once: true,
-      offset: 120,
-      anchorPlacement: 'top-center',
-      disable: function() {
-        // Disable on very small screens to avoid spacing issues
-        var maxWidth = 480;
-        return window.innerWidth < maxWidth;
-      }
+      offset: 50,
+      anchorPlacement: 'top-bottom',
+      // Only disable on very specific problematic cases, not all mobile devices
+      disable: false,
+      // Reduce animation intensity to prevent stuttering
+      easing: 'ease-out'
     });
   }
 
