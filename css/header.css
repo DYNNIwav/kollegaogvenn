@@ -5,20 +5,11 @@ header {
   width: 100vw;
   z-index: 100;
   background-color: rgba(234, 196, 211, 0.9);
-  font-family: var(--font-family-heading);
-  /* iOS safe area support - proper coverage */
   padding: 20px;
-  padding-top: calc(20px + env(safe-area-inset-top));
-  padding-left: calc(20px + env(safe-area-inset-left));
-  padding-right: calc(20px + env(safe-area-inset-right));
-  /* Ensure header extends into safe areas with background */
-  background: linear-gradient(
-    to bottom,
-    rgba(234, 196, 211, 0.9) 0%,
-    rgba(234, 196, 211, 0.9) 100%
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-family-heading);
+  /* Simple iOS Safari fix */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .navbar {

@@ -9,8 +9,6 @@
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  /* Simplified performance optimizations */
-  contain: layout;
 }
 
 #home-2 {
@@ -21,8 +19,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  /* Simplified performance optimizations */
-  contain: layout;
 }
 
 #home-img {
@@ -128,9 +124,6 @@ main {
   min-height: auto;
   padding: 2rem;
   box-sizing: border-box;
-  /* 2025 performance optimization */
-  content-visibility: auto;
-  contain-intrinsic-size: 400px;
 }
 
 .home-img-1,
@@ -153,11 +146,6 @@ main {
   height: auto;
   outline: clamp(12px, 2vw, 20px) solid #ffffff;
   display: block;
-  /* 2025 iOS Safari optimizations */
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .home-img-1:hover,

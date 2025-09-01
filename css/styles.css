@@ -9,25 +9,10 @@ html {
   overflow-x: hidden;
   max-width: 100vw;
   box-sizing: border-box;
-  /* 2025 iOS Safari scroll optimizations */
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-  /* Ensure safe areas are filled with background color */
-  background-color: var(--color-primary);
-  height: 100%;
 }
 
 * {
   box-sizing: border-box;
-}
-
-/* Critical: Ensure proper safe area background coverage */
-@supports (padding: max(0px)) {
-  body {
-    /* Use max() to ensure minimum padding in safe areas */
-    padding-left: max(0px, env(safe-area-inset-left));
-    padding-right: max(0px, env(safe-area-inset-right));
-  }
 }
 
 body {
@@ -36,18 +21,12 @@ body {
   background-color: var(--color-primary);
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
-  /* Extend into safe areas for proper coverage */
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
   max-width: 100vw;
   overflow-x: hidden;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* 2025 iOS Safari smooth scrolling optimizations */
+  /* Only the essential iOS Safari fix */
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -65,15 +44,6 @@ p {
 
 [data-aos] {
   transition-timing-function: ease-out !important;
-  transition-property: transform, opacity !important;
-  /* 2025 iOS Safari optimizations */
-  will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  /* Force hardware acceleration */
-  transform: translate3d(0, 0, 0);
 }
 
 /* Optimized fade animations for iOS Safari */
