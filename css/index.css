@@ -1,8 +1,6 @@
 #home {
-  /* Use stable viewport height with custom property fallback */
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,26 +10,20 @@
 }
 
 #home-2 {
-  /* Use stable viewport height with custom property fallback */
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 #home-img {
-  /* Use stable viewport height with custom property fallback */
   min-height: 50vh;
-  min-height: calc(var(--vh, 1vh) * 50);
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 0;
-  /* 2025 performance optimizations */
-  contain: layout style;
 }
 
 main {
@@ -42,17 +34,15 @@ main {
 }
 
 .home-container {
-  /* Use stable viewport height with custom property fallback */
   max-height: 100vh;
-  max-height: calc(var(--vh, 1vh) * 100);
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
 .sticker-home-container {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -181,9 +171,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
   padding: 2rem 0;
 }
 
