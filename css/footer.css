@@ -14,6 +14,8 @@ footer {
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
+  /* iOS safe area support - prevents stuttering near home indicator */
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
 }
 
 .footer-content {

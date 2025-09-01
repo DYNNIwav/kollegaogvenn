@@ -7,6 +7,10 @@ header {
   background-color: rgba(234, 196, 211, 0.9);
   padding: 20px;
   font-family: var(--font-family-heading);
+  /* iOS safe area support - prevents stuttering near notch */
+  padding-top: calc(20px + env(safe-area-inset-top));
+  padding-left: calc(20px + env(safe-area-inset-left));
+  padding-right: calc(20px + env(safe-area-inset-right));
 }
 
 .navbar {
