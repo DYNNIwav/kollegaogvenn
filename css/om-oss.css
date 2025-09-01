@@ -13,12 +13,13 @@
 }
 
 .om-oss-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
   text-align: center;
   font-style: oblique;
   margin-bottom: 80px;
   height: max-content;
-  width: 60vw;
+  width: 750px;
   position: relative;
   margin-top: 20vh;
   text-align: left;
@@ -176,7 +177,6 @@
 
 @media screen and (min-width: 3000px) {
   .om-oss-text {
-    width: 30vw;
   }
 
   .person-card-charlotte,
