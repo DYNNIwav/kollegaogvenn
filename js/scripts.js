@@ -54,18 +54,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
-  // Initialize AOS
+  // Initialize AOS with 2025 iOS Safari optimizations
   if (typeof AOS !== 'undefined') {
     AOS.init({
-      duration: 1000,
+      duration: 800,  // Shorter duration for better iOS performance
       once: true,
-      offset: 50,
+      offset: 100,    // Larger offset to prevent premature triggers
       anchorPlacement: 'top-bottom',
-      // Only disable on very specific problematic cases, not all mobile devices
       disable: false,
-      // Reduce animation intensity to prevent stuttering
-      easing: 'ease-out'
+      easing: 'ease-out',
+      // 2025 performance optimizations
+      throttleDelay: 99,  // Throttle scroll events
+      debounceDelay: 50   // Debounce resize events
     });
+    
+    // Additional iOS Safari optimization
+    document.addEventListener('touchstart', function() {}, { passive: true });
   }
 
   // Accordion functionality
