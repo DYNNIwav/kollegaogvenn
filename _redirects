@@ -1,0 +1,13 @@
+# Redirect old .html URLs to clean URLs
+/om-oss.html /om-oss 301
+/tjenester.html /tjenester 301
+/kontakt-oss.html /kontakt-oss 301
+/index.html / 301
+
+# Handle direct file access
+/om-oss.html /om-oss 301
+/tjenester.html /tjenester 301
+/kontakt-oss.html /kontakt-oss 301
+
+# Redirect old index URLs to root
+/index / 301
