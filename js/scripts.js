@@ -29,13 +29,16 @@ function onScroll() {
 window.addEventListener('scroll', onScroll);
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Lenis for smooth scrolling (DYNNI's secret weapon)
+  // Initialize Lenis for smooth scrolling with native-like feel
   if (window.Lenis) {
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+      duration: 0.1, // Very fast, almost instant
+      easing: (t) => t, // Linear for natural feel
       smooth: true,
-      smoothTouch: false, // Disable on touch devices to prevent conflicts
+      smoothTouch: false, // Keep native touch scrolling
+      lerp: 0.05, // Very low lerp for instant response
+      wheelMultiplier: 1.2, // Slightly enhanced wheel sensitivity
+      touchMultiplier: 1, // Standard touch sensitivity
     });
 
     function raf(time) {
