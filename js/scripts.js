@@ -1,6 +1,6 @@
-// DYNNI-inspired smooth scrolling and animation system
+// Combined Lenis + AOS system for smooth scrolling with beautiful animations
 
-// Animate-in on scroll using requestAnimationFrame (DYNNI approach)
+// DYNNI-inspired smooth scrolling with requestAnimationFrame (fallback)
 let ticking = false;
 
 function animateInOnScroll() {
@@ -25,12 +25,11 @@ function onScroll() {
   }
 }
 
-// Initialize scroll-based animations
+// Initialize scroll-based animations (fallback)
 window.addEventListener('scroll', onScroll);
 
-// Initialize Lenis smooth scroll (DYNNI's secret weapon)
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Lenis for smooth scrolling
+  // Initialize Lenis for smooth scrolling (DYNNI's secret weapon)
   if (window.Lenis) {
     const lenis = new Lenis({
       duration: 1.2,
@@ -46,7 +45,17 @@ document.addEventListener('DOMContentLoaded', function() {
     requestAnimationFrame(raf);
   }
 
-  // Trigger initial animation check
+  // Initialize AOS with optimized settings for smooth scrolling
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 120,
+      easing: 'ease-out'
+    });
+  }
+
+  // Trigger initial animation check (fallback)
   setTimeout(() => {
     animateInOnScroll();
   }, 200);
