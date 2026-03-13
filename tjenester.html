@@ -16,6 +16,7 @@
       name="keywords"
       content="tjenester, innholdsproduksjon, UGC, strategi, sosiale medier, Facebook Ads, Google Ads, TikTok"
     />
+    <meta name="author" content="Kollega & Venn" />
     <link rel="canonical" href="https://kollegaogvenn.no/tjenester" />
 
     <!-- Open Graph / Facebook -->
@@ -33,6 +34,7 @@
       property="og:image"
       content="https://kollegaogvenn.no/assets/img/hovedlogo/KVHovedLogo_RosaMørk.svg"
     />
+    <meta property="og:locale" content="nb_NO" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -75,6 +77,59 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "provider": {
+          "@type": "Organization",
+          "name": "Kollega & Venn",
+          "url": "https://kollegaogvenn.no"
+        },
+        "name": "Innholdsproduksjon og Digital Markedsføring",
+        "description": "Innholdsproduksjon, strategi og rådgivning, drifting av sosiale medier og betalt annonsering.",
+        "areaServed": "NO",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tjenester",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Innholdsproduksjon",
+                "description": "UGC, miljøbilder, videoinnhold, influencer samarbeid"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Strategi og rådgivning",
+                "description": "Kanalvalg, årshjul, joint marketing, contentplan, SEO/algoritmer"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Drifting av sosiale medier",
+                "description": "Produksjon og publiseringsplan, community management, analyse og rapportering"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Betalt annonsering",
+                "description": "Facebook Ads Manager, TikTok Business Manager, Google Ads"
+              }
+            }
+          ]
+        }
+      }
+    </script>
   </head>
 
   <body>
