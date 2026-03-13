@@ -1,6 +1,6 @@
-// Combined Lenis + AOS system for smooth scrolling with beautiful animations
+// AOS + scroll animation system
 
-// DYNNI-inspired smooth scrolling with requestAnimationFrame (fallback)
+// Scroll-triggered animations with requestAnimationFrame
 let ticking = false;
 
 function animateInOnScroll() {
@@ -25,30 +25,10 @@ function onScroll() {
   }
 }
 
-// Initialize scroll-based animations (fallback)
 window.addEventListener('scroll', onScroll);
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Lenis for smooth scrolling with native-like feel
-  if (window.Lenis) {
-    const lenis = new Lenis({
-      duration: 0.1, // Very fast, almost instant
-      easing: (t) => t, // Linear for natural feel
-      smooth: true,
-      smoothTouch: false, // Keep native touch scrolling
-      lerp: 0.05, // Very low lerp for instant response
-      wheelMultiplier: 1.2, // Slightly enhanced wheel sensitivity
-      touchMultiplier: 1, // Standard touch sensitivity
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }
-
-  // Initialize AOS with optimized settings for smooth scrolling
+  // Initialize AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({
       duration: 800,
@@ -58,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Trigger initial animation check (fallback)
+  // Trigger initial animation check
   setTimeout(() => {
     animateInOnScroll();
   }, 200);

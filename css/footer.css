@@ -1,5 +1,5 @@
 footer {
-  width: 100vw;
+  width: 100%;
   height: auto;
   color: var(--font-color-primary);
   z-index: 100;
@@ -49,5 +49,3 @@ footer {
   color: var(--font-color-primary);
 }
 
-@media screen and (max-width: 768px) {
-}
